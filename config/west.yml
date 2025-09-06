@@ -8,6 +8,8 @@ manifest:
       url-base: https://github.com/tokyo2006
     - name: englmaxi
       url-base: https://github.com/englmaxi
+    - name: infely                             # nice_view-battery
+      url-base: https://github.com/infely      # nice_view-battery
   projects:
     - name: mario-peripheral-animation
       remote: gpeye
@@ -22,5 +24,8 @@ manifest:
     - name: zmk-dongle-display
       remote: englmaxi
       revision: main
+    - name: nice-view-battery                  # nice_view-battery
+      remote: infely                           # nice_view-battery
+      revision: main                           # nice_view-battery
   self:
     path: config
