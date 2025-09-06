@@ -2,8 +2,6 @@ manifest:
   remotes:
     - name: zmkfirmware
       url-base: https://github.com/zmkfirmware
-    - name: gpeye
-      url-base: https://github.com/GPeye
     - name: tokyo2006
       url-base: https://github.com/tokyo2006
     - name: englmaxi
@@ -11,9 +9,6 @@ manifest:
     - name: infely                             # nice_view-battery
       url-base: https://github.com/infely      # nice_view-battery
   projects:
-    - name: mario-peripheral-animation
-      remote: gpeye
-      revision: main 
     - name: zmk
       remote: zmkfirmware
       revision: main
