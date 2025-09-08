@@ -5,15 +5,13 @@ include:
     shield: eyelash_sofle_central_dongle dongle_display
     # Sin Studio por BLE ni por USB (si lo quieres por USB, podemos reactivarlo luego)
     cmake-args: >-
-      -DCONFIG_ZMK_STUDIO=n
-      -DKEYMAP_FILE=/tmp/zmk-config/config/dongle.keymap
+      -DCONFIG_ZMK_STUDIO=nS
       -DCONFIG_BT_CTLR_ADV=n
     artifact-name: eyelash_sofle_central_dongle_oled
 
   # PERIPHERAL LEFT (mitad izquierda)
   - board: nice_nano_v2
     shield: eyelash_sofle_peripheral_left nice_view_battery
-
   # PERIPHERAL RIGHT (mitad derecha)
   - board: nice_nano_v2
     shield: eyelash_sofle_peripheral_right nice_view_battery
@@ -21,3 +19,4 @@ include:
   # SETTINGS RESET (opcional)
   - board: nice_nano_v2
     shield: settings_reset
+S
