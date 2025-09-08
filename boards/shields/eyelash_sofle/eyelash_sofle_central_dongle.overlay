@@ -1,15 +1,28 @@
 /*
- * Dongle central — USB al host; BLE solo para split (2 mitades)
+ * Dongle central — USB al host; BLE solo para split (2 mitades), sin salida BLE al host
  */
 
 #include "eyelash_sofle.dtsi"
 
 / {
+    /* === Fuerza salida al host: SOLO USB (definimos nuestro propio outputs) === */
+    outputs_dongle: outputs_dongle {
+        compatible = "zmk,outputs";
+
+        usbd_out: usbd_out {
+            compatible = "zmk,output-usb";
+        };
+
+        /* Importante: NO definimos ningún zmk,output-ble aquí */
+    };
+
     chosen {
-        /* Sin forzar salida aquí: la salida al host la decide Kconfig (.conf) */
-        zmk,outputs = &output_usbhid;
-        zmk,kscan = &mock_kscan;   /* el dongle no tiene matriz real */
-        zephyr,display = &oled;    /* OLED definido abajo */
+        /* Apunta a NUESTRO nodo de outputs (solo USB) */
+        zmk,outputs = &outputs_dongle;
+
+        /* El dongle no tiene matriz real (mock) y usa el OLED de abajo */
+        zmk,kscan = &mock_kscan;
+        zephyr,display = &oled;
     };
 
     /* Split: el dongle actúa como CENTRAL y enlaza 2 periféricos (mitades) */
