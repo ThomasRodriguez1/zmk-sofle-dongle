@@ -6,7 +6,6 @@ include:
     # Sin Studio por BLE ni por USB (si lo quieres por USB, podemos reactivarlo luego)
     cmake-args: >-
       -DCONFIG_ZMK_STUDIO=n
-      -DCONFIG_BT_CTLR_ADV=n
     artifact-name: eyelash_sofle_central_dongle_oled
 
   # PERIPHERAL LEFT (mitad izquierda)
