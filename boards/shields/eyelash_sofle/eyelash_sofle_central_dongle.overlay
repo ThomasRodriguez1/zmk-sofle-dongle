@@ -6,14 +6,9 @@
 
 / {
     chosen {
-        /* El host (PC) solo ve USB HID del dongle */
-        zmk,outputs = &output_usb;
-
-        /* El dongle no tiene matriz real; mock para satisfacer zmk,kscan */
-        zmk,kscan = &mock_kscan;
-
-        /* Usa el OLED definido abajo */
-        zephyr,display = &oled;
+        /* Sin forzar salida aquí: la salida al host la decide Kconfig (.conf) */
+        zmk,kscan = &mock_kscan;   /* el dongle no tiene matriz real */
+        zephyr,display = &oled;    /* OLED definido abajo */
     };
 
     /* Split: el dongle actúa como CENTRAL y enlaza 2 periféricos (mitades) */
