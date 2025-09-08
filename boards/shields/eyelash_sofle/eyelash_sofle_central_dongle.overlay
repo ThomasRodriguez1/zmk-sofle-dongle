@@ -7,7 +7,7 @@
 / {
     chosen {
         /* El host (PC) solo ve USB HID del dongle */
-        zmk,outputs = &output_usbhid;
+        zmk,outputs = &output_usb;
 
         /* El dongle no tiene matriz real; mock para satisfacer zmk,kscan */
         zmk,kscan = &mock_kscan;
@@ -32,7 +32,6 @@
     };
 };
 
-/* Pines I2C para el OLED */
 &pinctrl {
     i2c0_default: i2c0_default {
         group1 {
@@ -50,7 +49,6 @@
     };
 };
 
-/* OLED SH1106 en 0x3C */
 &i2c0 {
     status = "okay";
     compatible = "nordic,nrf-twi";
