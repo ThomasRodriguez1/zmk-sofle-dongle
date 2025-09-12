@@ -62,8 +62,8 @@ layers:
   - {t: '$$mdi:keyboard-return$$', type: enter}
   - L2
   - {t: '$$mdi:keyboard-return$$', type: enter}
-  - RA
   - $$mdi:apple-keyboard-shift$$
+  - RA
   - $$mdi:backspace-reverse-outline$$
   L1:
   - {t: '`', s: '~'}
@@ -145,7 +145,7 @@ layers:
   - F10
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
-  - BT C~LR
+  - $$mdi:bluetooth-off$$
   - BT CLR ALL
   - {t: '$$mdi:transfer$$', type: trans}
   - {t: '$$mdi:transfer$$', type: trans}
