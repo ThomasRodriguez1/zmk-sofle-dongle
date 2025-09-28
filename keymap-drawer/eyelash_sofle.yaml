@@ -63,7 +63,7 @@ layers:
   - $$mdi:keyboard-space$$
   - L2
   - $$mdi:apple-keyboard-shift$$
-  - RA(N)h
+  - AltGr+N
   - $$mdi:backspace-reverse-outline$$
   L1:
   - {t: '`', s: '~'}
